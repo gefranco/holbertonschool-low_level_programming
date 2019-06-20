@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /**
 * main - entry point
@@ -8,7 +7,7 @@
 int main(void)
 {
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
-	int i = sizeof(alphabet);
+	int i = 27;
 
 	while (i >= 0)
 	{
