@@ -12,7 +12,8 @@ int main(void)
 
 	while (alphabet[i] != '\0')
 	{
-		printf("%c\n", alphabet[i]);
+		putchar(alphabet[i]);
+		putchar('\n');
 		i++;
 	}
 }
