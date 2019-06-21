@@ -5,14 +5,13 @@
 */
 int main(void)
 {
-	char alph[] = "abcdefghijklmnopqrstuvwxyz";
-	int i = sizeof(alph);
-
-	while (i >= 0)
+	char z = 'z';
+	
+	do 
 	{
-		putchar(alph[i]);
-		i--;
-	}
+		putchar(z);
+		z--;
+	}while (z >= 'a');
 	putchar('\n');
 	return (0);
 }
