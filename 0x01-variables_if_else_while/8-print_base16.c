@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-	char alphabet[] = "123456789abcdef";
+	char alphabet[] = "0123456789abcdef";
 	int i = 0;
 
 	while (alphabet[i] != '\0')
