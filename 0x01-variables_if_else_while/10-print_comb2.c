@@ -17,8 +17,8 @@ int main(void)
 			if (!(i == 9 && j == 9))
 			{
 				putchar(',');
+				putchar(' ');
 			}
-			putchar(' ');
 		}
 		j = 1;
 	}
