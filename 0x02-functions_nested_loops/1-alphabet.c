@@ -4,9 +4,9 @@ int _putchar(char c);
 */
 void print_alphabet(void)
 {
-	int i = 48;
+	int i = 97;
 
-	while (i < 70)
+	while (i < 122)
 	{
 		_putchar(i);
 		i++;
