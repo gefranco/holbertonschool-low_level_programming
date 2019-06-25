@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 * print_last_digit - computes the absolute value of an integer.
-* @c: the number to compute the absolute value
+* @n: the number to compute the absolute value
 * Return: absolute number
 */
 int print_last_digit(int n)
