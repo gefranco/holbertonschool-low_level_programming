@@ -5,7 +5,7 @@
 void times_table(void)
 {
 	int n1;
-	int n2i = 0;
+	int n2 = 0;
 	int n21 = 0;
 	int firstDigit;
 
