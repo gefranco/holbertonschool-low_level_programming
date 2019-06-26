@@ -14,7 +14,10 @@ int main(void)
 	{
 		sum = n1 + n2;
 		n2 = sum;
-		printf("%d ,", sum);
+		if (i != 100)
+		{
+			printf("%d ,", sum);
+		}
 	}
 	putchar('\n');
 	return (0);
