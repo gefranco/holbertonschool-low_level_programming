@@ -19,12 +19,11 @@ int main(void)
 		if (sum % 2 != 0)
 		{
 			sumOdd += sum;
+
+		printf("%ld, ", sumOdd);
 		}
-		
 	}
-	printf("%ld", sumOdd);
+	
 	putchar('\n');
 	return (0);
 }
-
-
