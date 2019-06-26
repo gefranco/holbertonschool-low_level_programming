@@ -21,29 +21,18 @@ void times_table(void)
 					firstDigit /= 10;
 				}
 
-			_putchar(',');
+				_putchar(',');
 				_putchar(' ');
 				_putchar(firstDigit + '0');
 			}
-
-
+			if (n2 < 10 && n21 != 0)
 			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 
-
-
-if(n2<10 && n21!=0){
-
-			_putchar(',');
-
-			_putchar(' ');
-
-			_putchar(' ');
-
-}	
-
+			}
 			_putchar(n2 % 10 + '0');
-		}
-
 		}
 		n2 = 0;
 		_putchar('\n');
