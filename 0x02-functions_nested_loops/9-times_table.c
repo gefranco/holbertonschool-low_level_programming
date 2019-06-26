@@ -16,22 +16,34 @@ void times_table(void)
 			firstDigit = n2;
 			if (n2 >= 10)
 			{
-				while (firstDigit >= 10)
+				while (firstDigit > 10)
 				{
 					firstDigit /= 10;
-					_putchar(firstDigit + '0');
 				}
+
+			_putchar(',');
+				_putchar(' ');
+				_putchar(firstDigit + '0');
 			}
+
+
+			{
+
+
+
+if(n2<10 && n2!=0){
+
+			_putchar(',');
+
+			_putchar(' ');
+
+			_putchar(' ');
+
+}	
+
 			_putchar(n2 % 10 + '0');
-			if (n21 < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-			if (n2 < 10)
-			{
-				_putchar(' ');
-			}
+		}
+
 		}
 		n2 = 0;
 		_putchar('\n');
