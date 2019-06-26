@@ -10,13 +10,17 @@ int main(void)
 	int sum = 0;
 	int i;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i <= 100; i++)
 	{
 		sum = n1 + n2;
 		n2 = sum;
 		if (i != 100)
 		{
 			printf("%d ,", sum);
+		}
+		else
+		{
+			printf("%d", sum);
 		}
 	}
 	putchar('\n');
