@@ -12,12 +12,12 @@ int main(void)
 
 	printf("%ld, ", n1);
 	printf("%ld, ", n2);
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i < 48; i++)
 	{
 		sum = n1 + n2;
 		n1 = n2;
 		n2 = sum;	
-		if (i != 50)
+		if (i != 47)
 		{
 			printf("%ld, ", sum);
 		}
