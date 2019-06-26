@@ -5,24 +5,25 @@
 */
 int main(void)
 {
-	int n1 = 1;
-	int n2 = 2;
-	int sum = 0;
+	long n1 = 1;
+	long n2 = 2;
+	long sum = 0;
 	int i;
 
-	printf("%d, ", n1);
-	printf("%d, ", n2);
+	printf("%ld, ", n1);
+	printf("%ld, ", n2);
 	for (i = 0; i <= 50; i++)
 	{
 		sum = n1 + n2;
-		n2 = sum;
+		n1 = n2;
+		n2 = sum;	
 		if (i != 50)
 		{
-			printf("%d, ", sum);
+			printf("%ld, ", sum);
 		}
 		else
 		{
-			printf("%d", sum);
+			printf("%ld", sum);
 		}
 	}
 	putchar('\n');
