@@ -10,11 +10,11 @@ int main(void)
 	int sum = 0;
 	int i;
 
-	for (i = 0; i <= 100; i++)
+	for (i = 0; i <= 50; i++)
 	{
 		sum = n1 + n2;
 		n2 = sum;
-		if (i != 100)
+		if (i != 50)
 		{
 			printf("%d ,", sum);
 		}
