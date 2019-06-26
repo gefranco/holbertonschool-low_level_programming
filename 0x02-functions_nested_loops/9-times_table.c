@@ -16,7 +16,7 @@ void times_table(void)
 			firstDigit = n2;
 			if (n2 >= 10)
 			{
-				while (firstDigit > 10)
+				while (firstDigit >= 10)
 				{
 					firstDigit /= 10;
 				}
