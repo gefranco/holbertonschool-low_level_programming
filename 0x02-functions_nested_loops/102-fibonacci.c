@@ -10,13 +10,15 @@ int main(void)
 	int sum = 0;
 	int i;
 
+	printf("%d, ", n1);
+	printf("%d, ", n2);
 	for (i = 0; i <= 50; i++)
 	{
 		sum = n1 + n2;
 		n2 = sum;
 		if (i != 50)
 		{
-			printf("%d ,", sum);
+			printf("%d, ", sum);
 		}
 		else
 		{
