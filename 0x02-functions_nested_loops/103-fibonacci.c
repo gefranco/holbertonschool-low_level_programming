@@ -20,9 +20,9 @@ int main(void)
 		{
 			sumOdd += sum;
 		}
-		printf("%ld ,", sumOdd);
+		
 	}
-	printf("%ld ,", sumOdd);
+	printf("%ld", sumOdd);
 	putchar('\n');
 	return (0);
 }
