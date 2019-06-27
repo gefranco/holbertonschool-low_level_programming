@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
-* void print_line(int n) - function that draws a straight line in the terminal
+* print_line(int n) - function that draws a straight line in the terminal
+* @n: the size of the line
 */
 void print_line(int n)
 {
