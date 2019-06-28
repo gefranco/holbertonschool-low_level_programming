@@ -69,7 +69,7 @@ int main(void)
 			}else {
 			i++;
 }
-printf("\n")
+printf("\n");
 		}
 	
 	return (0);
