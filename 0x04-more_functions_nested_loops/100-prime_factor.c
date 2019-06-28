@@ -59,7 +59,7 @@ int main(void)
 					while(found % i == 0)
 					{
 						found = found / i;
-						printf("%ld, ",i );
+						printf("%ld ",i );
 					
 					}
 					i = 2;
@@ -69,6 +69,7 @@ int main(void)
 			}else {
 			i++;
 }
+printf("\n")
 		}
 	
 	return (0);
