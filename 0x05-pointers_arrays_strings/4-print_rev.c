@@ -2,10 +2,10 @@
 
 /**
  * print_rev - prints a string, in reverse.
- * @str :the pointer to a char variable
+ * @s :the pointer to a char variable
  * Return: length of string
  */
-void print_rev(char *str)
+void print_rev(char *s)
 {
 	int i = 0;
 
