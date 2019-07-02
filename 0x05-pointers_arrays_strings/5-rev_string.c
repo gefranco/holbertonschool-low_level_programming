@@ -11,9 +11,9 @@ void rev_string(char *str)
 	int x;
 	int x2;
 	int i = 0;
-	char rev[12];
+	char rev[100];
 	int j = 0;
-	
+
 	while ((c = *(str++)) != '\0')
 		i++;
 	x2 = i;
