@@ -14,6 +14,7 @@ char *_strcpy(char *dest, char *src)
 	i = 0;
 	do {
 		c = *(src++);
+		if(c=='\n')break;
 		dest[i] = c;
 		i++;
 	} while (c != '\n');
