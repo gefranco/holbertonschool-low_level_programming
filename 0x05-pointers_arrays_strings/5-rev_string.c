@@ -8,13 +8,14 @@
 void rev_string(char *str)
 {
 	char c;
+	int x;
+	int x2;
 	int i = 0;
-
+	char rev[12];
+	int j = 0;
 	while ((c = *(str++)) != '\0')
 		i++;
-	char rev[i];
-	int j = 0;
-	int x2 = i;
+	x2 = i;
 
 	while (i >= 0)
 	{
@@ -23,8 +24,6 @@ void rev_string(char *str)
 		i--;
 		j++;
 	}
-	int x;
-
 	for (x = 1; x <= x2; x++)
 	{
 		str[x - 1] = rev[x];
