@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * puts_half - prints half of a string
  * @str :the pointer to a char variable
