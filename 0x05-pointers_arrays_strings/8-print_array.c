@@ -2,8 +2,8 @@
 #include <stdio.h>
 /**
  * print_array - function that prints n elements of an array of integers
- * @a :the pointer to a char variable
- * @n :
+ * @a :the pointer to an array of ints
+ * @n :total numbers
  * Return: length of string
  */
 void print_array(int *a, int n)
@@ -18,6 +18,6 @@ void print_array(int *a, int n)
 		printf("%d, ", c);
 	} while (i < n - 1);
 	c = *(a++);
-	printf("%d ", c);
+	printf("%d", c);
 	putchar('\n');
 }
