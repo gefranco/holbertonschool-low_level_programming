@@ -17,12 +17,12 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (s1[i] > s2[i])
 		{
-			e = 15;
+			e = 1;
 			break;
 		}
 		else if (s2[i] > s1[i])
 		{
-			e = -15;
+			e = -1;
 			break;
 		}
 		i++;
