@@ -16,7 +16,7 @@ char *cap_string(char *src)
 		if (src[i] == '\n' || src[i] == '\t' || src[i] == ' '
 			|| src[i] == '.' || src[i] == ',' || src[i] == ';' || src[i] == '!'
 			|| src[i] == '?' || src[i] == '(' || src[i] == ')' || src[i] == '{'
-			|| src[i] == '}' || src[i] == '\"')
+			|| src[i] == '}' || src[i] == '"')
 		{
 			if ((src[i + 1] >= 97 && src[i + 1] <= 122))
 				src[i + 1] = src[i + 1] - 32;
