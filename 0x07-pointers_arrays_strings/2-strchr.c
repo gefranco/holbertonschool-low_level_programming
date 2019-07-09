@@ -18,8 +18,7 @@ char *_strchr(char *s, char c)
 			return (s + i);
 		i++;
 	}
-	i = 0;
-	while (s[i])
-		i++;
-	return (s + i);
+	if(toFind == s[i+1])
+		return (s + (i + 1));
+	return ('\0');
 }
