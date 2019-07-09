@@ -8,15 +8,15 @@
  */
 char *_strchr(char *s, char c)
 {
-	unsigned int i;
+	int i;
 	char toFind;
 
 	i = 0;
-	while ((toFind = *s++))
+	while ((toFind = s[i]))
 	{
 		if (toFind == c)
-			return (s);
+			return (s + i);
 		i++;
 	}
-	return (s - i);
+	return (s - 1);
 }
