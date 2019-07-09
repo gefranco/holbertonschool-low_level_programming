@@ -12,10 +12,10 @@ char *_strchr(char *s, char c)
 	char toFind;
 
 	i = 0;
-	while ((toFind = s[i]))
+	while ((toFind = *s++))
 	{
 		if (toFind == c)
-			return (s + i);
+			return (s);
 		i++;
 	}
 	return (s - i);
