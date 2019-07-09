@@ -20,5 +20,6 @@ char *_strchr(char *s, char c)
 	}
 	while (s[i])
 		i++;
+	i++;
 	return (s + i);
 }
