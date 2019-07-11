@@ -18,7 +18,7 @@ int _sqrt_recursion(int n)
  */
 int _sqrt(int n, int number)
 {
-	if (n < 0)
+	if (n <= 0)
 		return (-1);
 	else if (n * n == number)
 		return (n);
