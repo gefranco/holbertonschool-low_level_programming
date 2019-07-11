@@ -8,7 +8,7 @@ int _sqrt(int exp, int number);
  */
 int _sqrt_recursion(int n)
 {
-	if(n < 0)
+	if(n < 1)
 		n = n * (-1);
 	return (_sqrt(n, n));
 }
