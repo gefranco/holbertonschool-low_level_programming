@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
+
 int is_number(char *n);
+int _isdigit(char v);
 /**
  * main - check the code for Holberton School students.
  * @argc: the total atguments
@@ -36,4 +37,11 @@ int is_number(char *n)
 			return (0);
 	}
 	return (1);
+}
+int _isdigit(char c)
+{
+	if(c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
