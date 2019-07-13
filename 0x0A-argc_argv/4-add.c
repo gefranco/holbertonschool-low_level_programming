@@ -27,6 +27,11 @@ int main(int argc, char *argv[])
 	printf("%d\n", sum);
 	return (0);
 }
+/**
+ * is_number - check if a string is a number
+ * @n: the string
+ * Return: 1 if is number 0 otherwise
+ */
 int is_number(char *n)
 {
 	int i;
@@ -38,9 +43,14 @@ int is_number(char *n)
 	}
 	return (1);
 }
+/**
+ * _isdigit - check if a char is a digit
+ * @c: the char
+ * Return: 1 if is digit 0 otherwise
+ */
 int _isdigit(char c)
 {
-	if(c >= '0' && c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
