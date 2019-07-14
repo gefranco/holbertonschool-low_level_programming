@@ -15,12 +15,17 @@ int main(int argc, char *argv[])
 	int total_change = 0;
 	int i = 0;
 
-	if (argc < 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 	change = atoi(argv[1]);
+	if (change < 0)
+	{
+		printf("%d\n", 0);
+		return (1);
+	}
 	while (change > 0)
 	{
 		sb = atoi(argv[1]) % cents[i];
