@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	}
 	while (change > 0)
 	{
-		sb = atoi(argv[1]) % cents[i];
+		sb = change % cents[i];
 		change = change / cents[i];
 		total_change += change;
 		change = sb;
