@@ -34,6 +34,6 @@ int main(int argc, char *argv[])
 		change = sb;
 		i++;
 	}
-	printf("%d \n", total_change);
+	printf("%d\n", total_change);
 	return (0);
 }
