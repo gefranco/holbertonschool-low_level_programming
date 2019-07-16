@@ -15,11 +15,15 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i2 = 0;
 	unsigned int j2 = 0;
 
-	while (s1[i])
+	while (s1 != NULL && s1[i])
 		i++;
-	while (s2[j])
+	while (s2 != NULL && s2[j])
 		j++;
 	a = malloc((i + j) * sizeof(char));
+	if (a == NULL)
+	{
+		return (NULL);
+	}
 	while (i2 < i)
 	{
 		a[i2] = s1[i2];
