@@ -34,14 +34,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		a[i2] = s1[i2];
 		i2++;
 	}
-
 	while (j2 < n)
 	{
 		a[j2 + i2] = s2[j2];
 		j2++;
 	}
 	j2++;
-	a[j2 + 1]= '\0';
+	a[j2 + i2] = '\0';
 	return (a);
 }
 
