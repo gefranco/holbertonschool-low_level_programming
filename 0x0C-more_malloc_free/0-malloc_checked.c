@@ -10,6 +10,9 @@ void *malloc_checked(unsigned int b)
 {
 
 	if (b > 0 && malloc(b))
-		return (malloc(b));
-		exit(98);
+	{
+		free(b);
+		return malloc(98);
+	}
+	exit(98);
 }
