@@ -1,8 +1,9 @@
 #include <stdlib.h>
 /**
- * array_range - a function that creates an array of integers
- * @min: the minimun number
- * @max: the maximun number
+ * _realloc - function that reallocates a memory block
+ * @ptr: old pointer
+ * @old_size: the old size
+ * @new_size: the new size
  * Return: the pointer to the memory allocation
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
