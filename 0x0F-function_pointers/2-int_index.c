@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 /**
  * cmp - check if a number is integer
  * @n: the integer to check
@@ -7,7 +9,7 @@
  */
 int cmp(int n)
 {
-	if (n)
+	if (n && isdigit(n))
 		return (0);
 	else
 		return (1);
