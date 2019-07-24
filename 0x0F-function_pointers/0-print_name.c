@@ -1,15 +1,5 @@
 #include <stdio.h>
-/**
- * f - print a name
- * @name: name of the person
- *
- * Return: Nothing.
- */
-void f(char *name)
-{
-	if (name)
-		printf("%s\n", name);
-}
+
 /**
  * print_name - print a name
  * @name: name of the person
