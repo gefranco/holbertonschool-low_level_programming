@@ -7,7 +7,8 @@
  */
 void f(char *name)
 {
-	printf("%s\n", name);
+	if (name)
+		printf("%s\n", name);
 }
 /**
  * print_name - print a name
