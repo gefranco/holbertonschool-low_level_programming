@@ -27,6 +27,7 @@ void print_all(const char * const format, ...)
 			if (print_o[j].t[0] == format[i])
 			{
 				print_o[j].f(valist);
+				printf(", ");
 				j++;
 				continue;
 			}
@@ -43,7 +44,7 @@ void print_all(const char * const format, ...)
  */
 void print_char(va_list valist)
 {
-	printf("%c ", va_arg(valist, int));
+	printf("%c", va_arg(valist, int));
 }
 /**
  * print_int - print an integer
@@ -51,7 +52,7 @@ void print_char(va_list valist)
  */
 void print_int(va_list valist)
 {
-	printf("%d ", va_arg(valist, int));
+	printf("%d", va_arg(valist, int));
 }
 /**
  * print_float - print float
@@ -59,7 +60,7 @@ void print_int(va_list valist)
  */
 void print_float(va_list valist)
 {
-	printf("%f ", va_arg(valist, double));
+	printf("%f", va_arg(valist, double));
 }
 /**
  * print_str - print a string
@@ -67,5 +68,5 @@ void print_float(va_list valist)
  */
 void print_str(va_list valist)
 {
-	printf("%s ", va_arg(valist, char*));
+	printf("%s", va_arg(valist, char*));
 }
