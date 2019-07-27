@@ -10,6 +10,12 @@
 	void print_int(va_list);
 	void print_float(va_list);
 	void print_str(va_list);
+	/**
+	* struct prt - Struct prt
+	*
+	* @t: The operator
+	* @f: The function associated
+	*/
 	typedef struct prt
 	{
 		char *t;
