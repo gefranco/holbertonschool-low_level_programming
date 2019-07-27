@@ -70,7 +70,6 @@ void print_float(va_list valist)
 void print_str(va_list valist)
 {
 	char *v = va_arg(valist, char*);
-	if (!v)
-		v = "(nil)";
+	v  =  v ?  v :  "(nil)";
 	printf("%s", v);
 }
