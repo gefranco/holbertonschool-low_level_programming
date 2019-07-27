@@ -7,6 +7,7 @@
  */
 void print_all(const char * const format, ...)
 {
+	
 	prt_o print_o[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -17,6 +18,9 @@ void print_all(const char * const format, ...)
 	va_list valist;
 	int i = 0;
 	int j = 0;
+	
+	if(!format)
+		return;
 
 	va_start(valist, format);
 	while (format[i])
@@ -27,7 +31,8 @@ void print_all(const char * const format, ...)
 			if (print_o[j].t[0] == format[i])
 			{
 				print_o[j].f(valist);
-				printf(", ");
+				if(format[i + 1])
+					printf(", ");
 				j++;
 				continue;
 			}
