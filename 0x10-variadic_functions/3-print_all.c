@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 	int j = 0;
 
 	va_start(valist, format);
-	while (format[i])
+	while (format && format[i])
 	{
 		j = 0;
 		while (print_o[j].t)
