@@ -4,7 +4,6 @@
  * print_numbers - function that prints numbers
  * @separator: char to separate the numbers
  * @n: number of arguments
- * Return: Always 0.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -19,6 +18,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%d", va_arg(valist, int));
 	}
-	printf("%d\n", va_arg(valist, int));
+	printf("%d", va_arg(valist, int));
+	printf("\n");
 	va_end(valist);
 }
