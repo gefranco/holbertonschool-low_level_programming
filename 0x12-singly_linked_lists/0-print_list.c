@@ -5,7 +5,7 @@
 /**
  * print_list - print the elements of a simple list
  * @h: the list
- *
+ * Return: the size of printed nodes
  */
 size_t print_list(const list_t *h)
 {
