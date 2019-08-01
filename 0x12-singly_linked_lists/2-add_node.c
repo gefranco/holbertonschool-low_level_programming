@@ -22,20 +22,19 @@ list_t *add_node(list_t **head, const char *str)
 		len++;
 		i++;
 	}
-	if (*head == NULL)
-	{
-		node = malloc(sizeof(list_t));
-		if (node == NULL)
-			return (NULL);
-		node->str = copy;
-		node->len = len;
-		node->next = NULL;
-		*head = node;
-		return (*head);
 	/*
-	 * return *head;
+*	if (*head == NULL)
+*	{
+*		node = malloc(sizeof(list_t));
+*		if (node == NULL)
+*			return (NULL);
+*		node->str = copy;
+*		node->len = len;
+*		node->next = NULL;
+*		*head = node;
+*		return (*head);
+*	}
 	*/
-	}
 	node = malloc(sizeof(list_t));
 	if (node == NULL)
 		return (NULL);
