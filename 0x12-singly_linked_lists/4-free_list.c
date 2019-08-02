@@ -29,7 +29,8 @@ void free_list(list_t *head)
 		head = headtmp;
 
 	}
-	free(head->str);
+	if (head->str)
+		free(head->str);
 	free(head);
 
 }
