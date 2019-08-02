@@ -14,7 +14,7 @@ void free_list(list_t *head)
 		return count;
 	*/
 
-	if(head == NULL)
+	if (head == NULL)
 		return;
 
 	while (head->next)
