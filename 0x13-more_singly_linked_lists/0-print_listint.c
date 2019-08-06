@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * print_list - print the elements of a simple list
+ * print_listint - print the elements of a simple list
  * @h: the list
  * Return: the size of printed nodes
  */
