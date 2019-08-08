@@ -36,7 +36,7 @@ int citob(unsigned long int nu)
 {
 	int count;
 	
-	unsigned long int cu = 0;
+	unsigned long int cu = 1;
 	count = 0;
 	while(nu > cu)
 	{
