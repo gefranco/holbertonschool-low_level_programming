@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include "holberton.h"
 /**
  * print_binary - prints the binary representation of a number
  * @n: the number
@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 		print_binary(n >> 1);
 
 	b = n & 1;
-	printf("%d", b);
+	_putchar(b+'0');
 
 }
 
