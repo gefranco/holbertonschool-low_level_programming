@@ -12,9 +12,12 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	unsigned long int nu = 0;
 	unsigned long int nu2 = *n;
 
+	if (index > 63)
+		return (-1);
+
 	while (index + 1 > c)
 	{
-		if (nu2 > 0)
+		if (nu2 > c)
 			nu2 = nu2 >> 1;
 		else
 			break;
