@@ -14,7 +14,7 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	b = 0;
 	u = 1;
-	if (n > ULONG_MAX)
+	if (index > 63)
 		return (-1);
 	while (index + 1 > c)
 	{
