@@ -41,7 +41,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	l = read(fd, buf, letters);
 
-	/*buf[letters] = '\0';*/
+	buf[letters + 1] = '\0';
 
 
 	lw = write(1, buf, l);
