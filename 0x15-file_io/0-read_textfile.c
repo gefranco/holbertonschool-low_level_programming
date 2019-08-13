@@ -16,6 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;
 	char *buf;
 	int l;
+	unsigned int lw;
 
 	if (filename == NULL)
 		return (0);
@@ -41,8 +42,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf[letters] = '\0';
 
 
-	write(1, buf, l);
+	lw = write(1, buf, l);
 
+	printf("%d ",lw);
 	close(fd);
-	return (l);
+
+
+	return (lw);
 }
