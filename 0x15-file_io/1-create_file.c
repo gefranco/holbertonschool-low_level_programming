@@ -4,6 +4,7 @@
 #include<sys/stat.h>
 #include<fcntl.h>
 #include<unistd.h>
+#include<string.h>
 /**
  * create_file - function that reads a text file and prints it.
  * @filename: archive filename
