@@ -4,6 +4,12 @@
 #include<sys/stat.h>
 #include<fcntl.h>
 #include<unistd.h>
+/**
+ * read_textfile - function that reads a text file and prints it.
+ * @filename: archive filename
+ * @letters: number of letters it should read and print
+ * Return: Always 0.
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 
@@ -11,25 +17,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buf;
 	int l;
 
-	if (filename == NULL )
+	if (filename == NULL)
 		return (0);
-/*	fd = open("myfile.txt", O_CREAT | O_WRONLY, 0600);
-
-	if (fd == -1)
-	{
-		printf("Failed to create and open the file\n");
-		exit(1);
-	}
-
-
-	write(fd, "Hello World!\n",13);
-
-	
-
-	close(fd);
-*/
-
-	/*read*/
 
 
 
@@ -39,24 +28,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 
 
-	if (fd==-1)
+	if (fd == -1)
 	{
 
-		return(0);
+		return (0);
 
 	}
-	
+
 
 	l = read(fd, buf, letters);
 
-	buf[letters]='\0';
+	buf[letters] = '\0';
 
-		
 
 	write(1, buf, l);
 
 	close(fd);
 	return (l);
 }
-
-
