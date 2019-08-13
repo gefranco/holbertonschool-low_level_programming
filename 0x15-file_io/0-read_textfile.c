@@ -44,7 +44,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	lw = write(1, buf, l);
 
-	printf("%d ",lw);
 	close(fd);
 
 
