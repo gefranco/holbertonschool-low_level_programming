@@ -4,6 +4,7 @@
 #include<sys/stat.h>
 #include<fcntl.h>
 #include<unistd.h>
+#include<string.h>
 /**
  * append_text_to_file -function that appends text at the end of a file
  * @filename: archive filename
@@ -15,7 +16,8 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	int fd;
 
-	int l;
+
+	int lw;
 
 	if (filename == NULL)
 		return (0);
@@ -26,12 +28,13 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (0);
 	}
 
-	l = 0;
-	while (text_content[l])
-		l++;
 
-	write(fd, text_content, l);
 
+
+	lw = write(fd, text_content, strlen(text_content));
+	
+	if(lw < 0)
+		return(0);
 
 
 	close(fd);
