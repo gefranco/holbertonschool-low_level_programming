@@ -18,12 +18,12 @@ int create_file(const char *filename, char *text_content)
 	int l;
 
 	if (filename == NULL)
-		return (0);
+		return (-1);
 	fd = open(filename, O_CREAT | O_WRONLY, 0600);
 
 	if (fd == -1)
 	{
-		return (0);
+		return (-1);
 	}
 
 	l = 0;
