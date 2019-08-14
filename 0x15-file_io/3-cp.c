@@ -12,6 +12,7 @@
  * Return: Always 0.
  */
 int copy_file(const char *src, const char *dest)
+
 {
 
 	int fd;
@@ -29,8 +30,13 @@ int copy_file(const char *src, const char *dest)
 
 	 if (fd == -1)
 	 {
+		
 		 
-		 exit(98);
+		 char *err = "Error: Can't read from file " + *src +'\n';
+		
+		 write(STDERR_FILENO, &err ,strlen(err));	 
+		
+	       	exit(98);
 	 }
 	
 	
@@ -40,10 +46,13 @@ int copy_file(const char *src, const char *dest)
 	if (dest == NULL)
 		return (0);
 
-	fdd = open(dest, O_CREAT | O_WRONLY | O_APPEND, 0600);
+	fdd = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0661);
 
 	if (fdd == -1)
 	{
+		char *err = "Error: Can't write to " + *dest + '\n';
+		write(STDERR_FILENO,err,strlen(err));
+		exit(98);
 		return (-1);
 	}
 
@@ -57,26 +66,41 @@ int copy_file(const char *src, const char *dest)
 		 /*write(fdd, buf, 1024);*/
 		
 		 /*dprintf(fptr,"%d.%s\n", i, str);*/  
-		 read(fd, buf, 1024);
 		
 		 i = 0;
 		 while(buf[i] != '\0')
 		 {
 			/*write(fdd, buf, 1);*/
+			
 			 dprintf(fdd,"%c",buf[i]);
 			i++;
 		 }
-		 j+=1024;
+
+		 read(fd, buf, 1024);
+		 j += 1024;
 	 }
 
+		
 
 
 
 
+	if(close(fd)==-1)
+	{
+		char *err = "Error: Can't close fd " + fd;
+		write(STDERR_FILENO,err,strlen(err));
+		exit(100);
+		
+	}
+		
 
-	close(fd);	
+	if(close(fdd)==-1)
+	{
+		char *err = "Error: Can't close fd  " + fd;
+		write(STDERR_FILENO, err,strlen(err));
 
-	close(fdd);
+		exit(100);
+	}
 
 	return (1);
 
@@ -88,7 +112,13 @@ int copy_file(const char *src, const char *dest)
 int main(int argc, char *argv[])
 {
 
-(void) argc;
+
+	if(argc != 3)
+	{
+		write(STDERR_FILENO,"Usage: cp file_from file_to\n",28);
+		exit(97);
+	}
+	
 
 copy_file(argv[1],argv[2]);
 
