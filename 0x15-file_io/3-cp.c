@@ -18,8 +18,9 @@ int copy_file(const char *src, const char *dest)
 	int fdd;
 
 
-	int i = 1024;
+	int j = 1024;
 
+	int i;
 	char buf[1024];
 
 /*read*/
@@ -50,13 +51,22 @@ int copy_file(const char *src, const char *dest)
 
 	 read(fd, buf, 1024);
 
-	 while(buf[i] != '\0')
+	 while(buf[j] != '\0')
 	 {
 
-		 write(fdd, buf, 1024);
+		 /*write(fdd, buf, 1024);*/
+		
+		 /*dprintf(fptr,"%d.%s\n", i, str);*/  
 		 read(fd, buf, 1024);
-
-		 i+=1024;
+		
+		 i = 0;
+		 while(buf[i] != '\0')
+		 {
+			/*write(fdd, buf, 1);*/
+			 dprintf(fdd,"%c",buf[i]);
+			i++;
+		 }
+		 j+=1024;
 	 }
 
 
