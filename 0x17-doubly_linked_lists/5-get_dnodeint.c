@@ -12,9 +12,12 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	unsigned int i;
 	dlistint_t *tmp_node;
-	
+
 	i = 0;
 	tmp_node = head;
+
+	if (head == NULL)
+		return (NULL);
 
 	while (tmp_node)
 	{
