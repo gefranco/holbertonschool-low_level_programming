@@ -8,12 +8,12 @@
  * @index: the node index
  * Return: 1 if it succeeded, -1 if it failed
  */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	unsigned int i;
 
-	listint_t *node;
-	listint_t *myhead;
+	dlistint_t *node;
+	dlistint_t *myhead;
 
 	myhead = *head;
 
