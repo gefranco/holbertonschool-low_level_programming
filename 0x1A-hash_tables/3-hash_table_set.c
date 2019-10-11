@@ -31,17 +31,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		node = ht->array[ki];
-		node_tmp = node;
-		if (strcmp(node_tmp->key, key) == 0)
+		if (strcmp(node->key, key) == 0)
                 {
-                                node_tmp->value = strdup(value);
+                                node->value = strdup(value);
                                 return (1);
                 }
+		node_tmp = node;
 		while (node_tmp->next)
 		{
 			if (strcmp(node_tmp->key, key) == 0)
 			{
-				node_tmp->value = strdup(value);
+				th->array[ki]->value = strdup(value);
 				return (1);
 			}
 			node_tmp = node_tmp->next;
