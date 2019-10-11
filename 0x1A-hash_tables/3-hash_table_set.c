@@ -20,20 +20,40 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || key == NULL || strlen(key) == 0)
 		return (0);
 	ki = key_index((unsigned char *)key, ht->size);
+	/*
 	node = malloc(sizeof(struct hash_node_s *));
 	if (node == NULL)
 		return (0);
 	node->value = strdup(value);
 	node->key = strdup(key);
 	node->next = NULL;
+	*/
 	if (myarray[ki] == NULL)
 	{
+		node = malloc(sizeof(struct hash_node_s *));
+        	if (node == NULL)
+                	return (0);
+        	node->value = strdup(value);
+        	node->key = strdup(key);
+        	node->next = NULL;
 		myarray[ki] = node;
 		return (1);
 	}
 	else
 	{
 		node = myarray[ki];
+
+		while (node->next)
+		{	if(strcmp(node->key,key) == 0)
+			{
+				node->value = strdup(value);
+				return(1);
+			}
+			node = node->next;
+		}
+
+
+
 		new_node = malloc(sizeof(hash_node_t *));
 		if (new_node == NULL)
 			return (0);
