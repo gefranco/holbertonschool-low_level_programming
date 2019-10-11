@@ -41,7 +41,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(node_tmp->key, key) == 0)
 			{
-				th->array[ki]->value = strdup(value);
+				ht->array[ki]->value = strdup(value);
 				return (1);
 			}
 			node_tmp = node_tmp->next;
