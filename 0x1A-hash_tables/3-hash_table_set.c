@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	ki = key_index((unsigned char *)key, ht->size);
 	if (ht->array[ki] == NULL)
 	{
-		node = malloc(sizeof(struct hash_node_s));
+		node = malloc(sizeof(hash_node_t));
 		if (node == NULL)
 			return (0);
 		node->value = strdup(value);
