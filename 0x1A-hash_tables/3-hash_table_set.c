@@ -9,6 +9,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	hash_node_t *node;
 
+	hash_node_t *new_node;
+
 	ki = key_index((unsigned char *)key, ht->size);
 
 	node = malloc(sizeof(struct hash_node_s));
@@ -16,9 +18,26 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node->value = (char *)value;
 
 	node->key = (char *)key;
+	
+	if(myarray[ki] == NULL)
+	{
+		myarray[ki] = node;
+		return (1);
+	}
+	else
+	{
+		node = myarray[ki];
+		 
+		new_node = malloc(sizeof(struct hash_node_s));
 
-	myarray[ki] = node;
+        	new_node->value = (char *)value;
 
+        	new_node->key = (char *)key;
+		
+		new_node->next = node;
+
+
+	}
 
 	return (1);
 }
