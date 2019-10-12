@@ -8,16 +8,16 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int size = ht->size;
+	unsigned long int size;
 	int printed = 0;
 	unsigned long int i, contador = 0;
-	hash_node_t *node, *tmp_node;
-	
-	hash_node_t **myarray = malloc(ht->size * sizeof(hash_node_t));
-	if (ht == NULL ||  ht->array == NULL)
-	{
-		return;
-	}
+	hash_node_t *node, *tmp_node, **myarray;
+	if (ht == NULL)
+        {
+                return;
+        }
+	size = ht->size;
+	myarray = malloc(ht->size * sizeof(hash_node_t));
 	printf("{");
 	for (i = 0; i < size; i++)
 	{
