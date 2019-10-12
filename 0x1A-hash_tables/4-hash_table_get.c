@@ -13,7 +13,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int ki;
 
 
-	hash_node_t *node, *tmp_node;
+	hash_node_t *node;
 
 	char *my_key;
 
@@ -30,14 +30,16 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	else if (node)
 	{
-		tmp_node = node;
-		while (tmp_node != NULL)
+		
+		while (node != NULL)
 		{
-			my_key = (char *) tmp_node->key;
+			my_key = (char *) node->key;
 			if (strcmp((char *)key, my_key) == 0)
-				return (tmp_node->value);
+			{
 
-			tmp_node = tmp_node->next;
+				return (node->value);
+			}
+			node = node->next;
 		}
 	}
 
