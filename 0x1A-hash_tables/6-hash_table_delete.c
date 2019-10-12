@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * hash_table_print - a function that print a hashtable
+ * hash_table_delete - a function that delete a hashtable
  * @ht: the hashtable
  */
 void hash_table_delete(hash_table_t *ht)
