@@ -42,7 +42,7 @@ void hash_table_print(const hash_table_t *ht)
 			tmp_node = node;
 			while (tmp_node != NULL)
 			{
-				myarray[contador] = node;
+				myarray[contador] = tmp_node;
 				contador++;
 				tmp_node = tmp_node->next;
 			}
