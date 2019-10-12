@@ -40,7 +40,7 @@ void hash_table_print(const hash_table_t *ht)
 		else if (node)
 		{
 			tmp_node = node;
-			while (tmp_node->next != NULL)
+			while (tmp_node != NULL)
 			{
 				myarray[contador] = node;
 				contador++;
