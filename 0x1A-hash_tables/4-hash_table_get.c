@@ -31,7 +31,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	else if (node)
 	{
 		tmp_node = node;
-		while (tmp_node->next != NULL)
+		while (tmp_node != NULL)
 		{
 			my_key = (char *) tmp_node->key;
 			if (strcmp((char *)key, my_key) == 0)
