@@ -8,39 +8,34 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i, size, contador = 0;
-	hash_node_t *node, *tmp_node, **myarray;
+	unsigned long int i, size;
+	hash_node_t *node, *tmp_node;
 
-	if (ht == NULL || ht->array == NULL || ht->size < 1)
+	int comma = 0;
+
+	if (ht == NULL || ht->array == NULL)
 	{
 		return;
 	}
 	size = ht->size;
-	myarray = malloc(ht->size * sizeof(hash_node_t));
 	printf("{");
+
 	for (i = 0; i < size; i++)
 	{
 		node = ht->array[i];
-		if (node && node->next == NULL)
-		{
-			myarray[contador] = node;
-			contador++;
-		}
-		else if (node)
-		{
 			tmp_node = node;
 			while (tmp_node != NULL)
 			{
-				myarray[contador] = tmp_node;
-				contador++;
+				if (comma == 1)
+					printf(", ");
+				printf("'%s': '%s'", tmp_node->key, tmp_node->value);
+				comma = 1;
+
+
 				tmp_node = tmp_node->next;
 			}
-		}
+
 	}
-	for (i = 0; i < contador; i++)
-		if (i == contador - 1)
-			printf("'%s': '%s'", (char *)myarray[i]->key, (char *)myarray[i]->value);
-		else
-			printf("'%s': '%s', ", (char *)myarray[i]->key, (char *)myarray[i]->value);
 	printf("}\n");
+
 }
