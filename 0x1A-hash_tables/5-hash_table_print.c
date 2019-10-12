@@ -57,7 +57,7 @@ void hash_table_print(const hash_table_t *ht)
 		if(i == contador -1)	
 			printf("'%s': '%s'", (char *)myarray[i]->key, (char *)myarray[i]->value);
 		else
-			printf("'%s': '%s',", (char *)myarray[i]->key, (char *)myarray[i]->value);
+			printf("'%s': '%s', ", (char *)myarray[i]->key, (char *)myarray[i]->value);
 
 	printf("}\n");
 }
