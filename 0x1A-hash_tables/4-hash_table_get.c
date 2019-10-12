@@ -30,7 +30,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	else if (node)
 	{
-		
+
 		while (node != NULL)
 		{
 			my_key = (char *) node->key;
