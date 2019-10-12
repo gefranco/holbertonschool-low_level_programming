@@ -13,7 +13,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	int comma = 0;
 
-	if (ht == NULL || ht->array == NULL)
+	if (ht == NULL)
 	{
 		return;
 	}
