@@ -52,7 +52,6 @@ void hash_table_print(const hash_table_t *ht)
 
 
 	}
-	if(myarray[0] != NULL)
 	for(i = 0; i < contador;i++)
 		if(i == contador -1)	
 			printf("'%s': '%s'", (char *)myarray[i]->key, (char *)myarray[i]->value);
