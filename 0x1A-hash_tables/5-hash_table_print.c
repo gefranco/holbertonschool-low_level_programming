@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 #include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
 /**
  * hash_table_print - a function that print a hashtable
  * @ht: the hashtable
@@ -10,10 +10,10 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int size = ht->size;
 	int printed = 0;
-	unsigned long int i;
-	hash_node_t *node, *tmp_node, *last_node;
+	unsigned long int i, contador = 0;
+	hash_node_t *node, *tmp_node;
 	
-
+	hash_node_t **myarray = malloc(ht->size * sizeof(hash_node_t));
 	if (ht == NULL)
 	{
 		printf("{}");
@@ -23,30 +23,28 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < size; i++)
 	{
 		node = ht->array[i];
-		last_node = node;
 		if (node && node->next == NULL)
 			if (printed == 0)
 			{
-				printf("'%s': '%s' ", (char *)node->key, (char *)node->value);
 				printed = 1;
-				last_node = node;
+				myarray[contador] = node;
+				contador++;
+
+				
 			}
 			else
 			{
-				printf(",'%s': '%s' ", (char *)node->key, (char *)node->value);
-				
-				last_node = node;
-				
+							
+				myarray[contador] = node;
+				contador++;
 			}
 		else if (node)
 		{
 			tmp_node = node;
 			while (tmp_node->next != NULL)
 			{
-				printf(",'%s': '%s' ", (char *)tmp_node->key, (char *)tmp_node->value);
-				
-				last_node = tmp_node;
-				
+				myarray[contador] = node;
+				contador++;
 				tmp_node = tmp_node->next;
 			}
 
@@ -54,8 +52,12 @@ void hash_table_print(const hash_table_t *ht)
 
 
 	}
-	if(last_node != NULL)	
-	printf("'%s': '%s'", (char *)last_node->key, (char *)last_node->value);
-	
+	if(myarray[0] != NULL)
+	for(i = 0; i < contador;i++)
+		if(i == contador -1)	
+			printf("'%s': '%s'", (char *)myarray[i]->key, (char *)myarray[i]->value);
+		else
+			printf("'%s': '%s',", (char *)myarray[i]->key, (char *)myarray[i]->value);
+
 	printf("}\n");
 }
