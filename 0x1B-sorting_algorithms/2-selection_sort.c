@@ -11,28 +11,34 @@ void selection_sort(int *array, size_t size)
 
 	size_t i, j;
 	int tmp;
-	int number;
-
+	size_t number;
+	/*int change;*/
 	if (!array || size < 1)
 		return;
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size - 1; i++)
 	{
-		number = array[i];
-		for (j = i + 1; j < size; j++)
+		number = i;
+		for (j = i + 1 ; j < size; j++)
 		{
-			if (array[j] < number)
+			if (array[j] < array[number])
 			{
-				tmp = number;
-				number = array[j];
-				array[j] = tmp;
+			/*	tmp = number;*/
+				/*number = array[j];*/
+				number = j;
+				/*change = j;*/
+				/*array[j] = tmp;*/
 
 			}
 
 		}
-		array[i] = number;
-		print_array(array, size);
-
+		if (number != i)
+		{
+			tmp = array[i];
+			array[i] = array[number];
+			array[number] = tmp;
+			print_array(array, size);
+		}
 	}
 
 }
