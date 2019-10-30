@@ -19,6 +19,7 @@ void insertion_sort_list(listint_t **list)
 			
 			swap(listj);
 			
+			print_list(*list);	
 			
 			listprev = listj;
 
@@ -52,8 +53,12 @@ void insertion_sort_list(listint_t **list)
 				}
 				else
 					listprev = listprev->prev;
+
+				/*print_list(*list);*/
 					
 			}
+
+			/*print_list(*list);*/
 			/*if (listj->next->next)
 			{
 				prev = listj->next;
@@ -81,7 +86,9 @@ void insertion_sort_list(listint_t **list)
 
 		else	
 			listj = listj->next;
-		print_list(*list);
+
+
+		/*print_list(*list);*/
 	}
 }
 
@@ -167,6 +174,7 @@ void swap(listint_t *listj)
 				listj->next = NULL;
 			}
 		}
+
 
 }
 
