@@ -12,7 +12,7 @@ void insertion_sort_list(listint_t **list)
 
 	if (!list || !*list)
 		return;
-
+	listj = listj->next;
 	while (listj->next)
 	{
 		if (listj->next->n < listj->n)
@@ -65,10 +65,6 @@ void swap(listint_t *listj)
 				if (listj->prev)
 				{
 					listj->prev->next = listj->next;
-				}
-				else
-				{
-
 				}
 				listj->next->prev = listj->prev;
 				tmp = listj->next->next;
