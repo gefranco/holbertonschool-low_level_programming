@@ -11,4 +11,3 @@ clean:
 	$(RM) *~ holberton
 oclean:
 	$(RM) $(OBJ)
-
