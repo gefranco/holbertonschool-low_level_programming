@@ -23,6 +23,4 @@ def island_perimeter(grid):
             island_h += 1
         elif (island_v > 1):
             island_va += island_v
-    print(island_va)
-    print(island_h)
     return island_va * island_h * 2
