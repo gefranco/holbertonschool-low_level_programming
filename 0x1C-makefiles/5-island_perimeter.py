@@ -1,6 +1,13 @@
 #!/usr/bin/python3
-
+"""
+================
+module that provides island_perimeter function
+===============
+"""
 def island_perimeter(grid):
+    """
+    Return island perimeter
+    """
     
     island_v = 0
     island_va = 0
