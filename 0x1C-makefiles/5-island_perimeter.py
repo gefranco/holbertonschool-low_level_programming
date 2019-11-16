@@ -11,11 +11,10 @@ def island_perimeter(grid):
     Return island perimeter
     """
 
-    island_v = 0
-    island_va = 0
-    island_h = 0
     borders = 0
     perimetro = 0
+    if grid is None:
+        return
     for y in range(len(grid)):
         for x in range(len(grid[y])):
             borders = 0
