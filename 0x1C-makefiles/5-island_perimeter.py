@@ -22,27 +22,27 @@ def island_perimeter(grid):
             if grid[y][x] == 1:
                 try:
                     if grid[y][x-1] == 1:
-                        borders +=1
+                        borders += 1
                 except:
                     pass
                 try:
                     if grid[y][x + 1] == 1:
-                        borders +=1
+                        borders += 1
                 except:
                     pass
                 try:
-                   if grid[y - 1][x] == 1:
-                        borders +=1
+                    if grid[y - 1][x] == 1:
+                        borders += 1
                 except:
                     pass
                 try:
                     if grid[y + 1][x] == 1:
-                        borders +=1
+                        borders += 1
                 except:
                     pass
 
                 if borders == 0:
-                    perimetro +=4
+                    perimetro += 4
                 elif borders == 1:
                     perimetro += 3
                 elif borders == 2:
@@ -51,6 +51,5 @@ def island_perimeter(grid):
                     perimetro += 1
                 else:
                     perimetro += 0
-    
 
     return perimetro
