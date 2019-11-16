@@ -13,8 +13,8 @@ def island_perimeter(grid):
 
     borders = 0
     perimetro = 0
-    if grid is None:
-        return
+    if grid is None or len(grid) == 0:
+        return 0
     for y in range(len(grid)):
         for x in range(len(grid[y])):
             borders = 0
