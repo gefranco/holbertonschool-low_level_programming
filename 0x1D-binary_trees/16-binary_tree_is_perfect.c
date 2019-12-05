@@ -40,6 +40,11 @@ int binary_tree_is_perfect_(const binary_tree_t *tree, int h, int level)
 
 	return (0);
 }
+/**
+ * tree_height - the height of a binary tree
+ * @tree: pointer to the root
+ * Return: the height
+ */
 int tree_height(const binary_tree_t *tree)
 {
 
